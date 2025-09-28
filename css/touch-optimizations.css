@@ -1,0 +1,59 @@
+/* Touch-specific optimizations */
+.touch-active {
+  transform: scale(0.98);
+  opacity: 0.8;
+  transition: all 0.1s ease;
+}
+
+/* Larger touch targets for mobile */
+@media (max-width: 768px) {
+  .btn,
+  .nav-link,
+  input[type="submit"],
+  button {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 0.75rem 1rem;
+  }
+
+  /* Improved form controls */
+  input,
+  textarea,
+  select {
+    min-height: 44px;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  /* Better spacing for touch */
+  .nav-item {
+    margin: 0.25rem 0;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Slow connection optimizations */
+.slow-connection img {
+  filter: blur(0.5px);
+}
+
+.save-data .hero {
+  background-image: none;
+  background-color: #14b8a6;
+}
+
+.save-data .featured-article img,
+.save-data .post-card img {
+  display: none;
+}
+
+/* WebP support */
+.webp .hero {
+  background-image: url("../images/hero-home-services.webp");
+}
+
+.no-webp .hero {
+  background-image: url("../images/hero-home-services.jpg");
+}
