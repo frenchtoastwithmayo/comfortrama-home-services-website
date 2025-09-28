@@ -352,8 +352,65 @@ body {
   box-shadow: var(--shadow-hover);
 }
 
-.service-icon {
-  margin-bottom: 1.5rem;
+.service-icon,
+.benefit-icon,
+.category-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 2rem;
+  color: var(--white);
+  font-weight: bold;
+}
+
+/* Service Icons */
+.service-card:nth-child(1) .service-icon {
+  background: linear-gradient(135deg, #ff6b35, #ff8c42);
+}
+
+.service-card:nth-child(1) .service-icon::before {
+  content: "🔥";
+}
+
+.service-card:nth-child(2) .service-icon {
+  background: linear-gradient(135deg, #20b2aa, #48cae4);
+}
+
+.service-card:nth-child(2) .service-icon::before {
+  content: "🔧";
+}
+
+.service-card:nth-child(3) .service-icon {
+  background: linear-gradient(135deg, #52b788, #74c69d);
+}
+
+.service-card:nth-child(3) .service-icon::before {
+  content: "🌿";
+}
+
+.service-card:nth-child(4) .service-icon {
+  background: linear-gradient(135deg, #f77f00, #fcbf49);
+}
+
+.service-card:nth-child(4) .service-icon::before {
+  content: "🗑️";
+}
+
+.service-card:nth-child(5) .service-icon {
+  background: linear-gradient(135deg, #4cc9f0, #7209b7);
+}
+
+.service-card:nth-child(5) .service-icon::before {
+  content: "✨";
+}
+
+.service-icon img,
+.benefit-icon img {
+  display: none;
 }
 
 .service-icon img {
@@ -474,6 +531,39 @@ body {
 .benefit-icon img {
   width: 50px;
   height: 50px;
+}
+
+/* Benefit Icons */
+.benefit-item:nth-child(1) .benefit-icon {
+  background: linear-gradient(135deg, #20b2aa, #48cae4);
+}
+
+.benefit-item:nth-child(1) .benefit-icon::before {
+  content: "🛡️";
+}
+
+.benefit-item:nth-child(2) .benefit-icon {
+  background: linear-gradient(135deg, #ff6b35, #ff8c42);
+}
+
+.benefit-item:nth-child(2) .benefit-icon::before {
+  content: "⭐";
+}
+
+.benefit-item:nth-child(3) .benefit-icon {
+  background: linear-gradient(135deg, #52b788, #74c69d);
+}
+
+.benefit-item:nth-child(3) .benefit-icon::before {
+  content: "✅";
+}
+
+.benefit-item:nth-child(4) .benefit-icon {
+  background: linear-gradient(135deg, #f77f00, #fcbf49);
+}
+
+.benefit-item:nth-child(4) .benefit-icon::before {
+  content: "🚨";
 }
 
 .benefit-item h3 {

@@ -1,10 +1,9 @@
 /* Blog-specific styles */
 .blog-hero {
-  background: linear-gradient(135deg, rgba(20, 184, 166, 0.9), rgba(251, 146, 60, 0.9)), url("../images/blog-hero.jpg");
-  background-size: cover;
-  background-position: center;
+  background: linear-gradient(135deg, var(--primary-teal), var(--primary-orange));
   color: white;
-  padding: 100px 0 60px;
+  padding: 120px 0 80px;
+  margin-top: 80px;
   text-align: center;
 }
 
@@ -21,16 +20,45 @@
   opacity: 0.95;
 }
 
+/* Breadcrumb */
+.breadcrumb {
+  background: var(--light-gray);
+  padding: 1rem 0;
+  margin-top: 80px;
+}
+
+.breadcrumb ol {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.breadcrumb a {
+  color: var(--primary-teal);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: var(--primary-orange);
+}
+
+.breadcrumb ol li:not(:last-child)::after {
+  content: ">";
+  margin-left: 0.5rem;
+  color: var(--medium-gray);
+}
+
 /* Featured Post */
 .featured-post {
   padding: 80px 0;
-  background: #f8fafc;
+  background: var(--light-gray);
 }
 
 .featured-post h2 {
   text-align: center;
   margin-bottom: 3rem;
-  color: #1e293b;
+  color: var(--text-dark);
   font-size: 2.5rem;
 }
 
@@ -39,10 +67,10 @@
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   align-items: center;
-  background: white;
+  background: var(--white);
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-hover);
 }
 
 .article-image img {
@@ -63,8 +91,8 @@
 }
 
 .category {
-  background: #14b8a6;
-  color: white;
+  background: var(--primary-teal);
+  color: var(--white);
   padding: 0.25rem 0.75rem;
   border-radius: 20px;
   font-weight: 500;
@@ -77,22 +105,22 @@
 }
 
 .article-content h3 a {
-  color: #1e293b;
+  color: var(--text-dark);
   text-decoration: none;
 }
 
 .article-content h3 a:hover {
-  color: #14b8a6;
+  color: var(--primary-teal);
 }
 
 .article-content p {
-  color: #64748b;
+  color: var(--medium-gray);
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
 
 .read-more {
-  color: #fb923c;
+  color: var(--primary-orange);
   font-weight: 600;
   text-decoration: none;
   display: inline-flex;
@@ -101,7 +129,7 @@
 }
 
 .read-more:hover {
-  color: #ea580c;
+  color: #e55a2b;
 }
 
 .read-more::after {
@@ -116,12 +144,13 @@
 /* Blog Categories */
 .blog-categories {
   padding: 80px 0;
+  background: var(--white);
 }
 
 .blog-categories h2 {
   text-align: center;
   margin-bottom: 3rem;
-  color: #1e293b;
+  color: var(--text-dark);
   font-size: 2.5rem;
 }
 
@@ -132,61 +161,85 @@
 }
 
 .category-card {
-  background: white;
+  background: var(--white);
   padding: 2rem;
   border-radius: 12px;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .category-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-hover);
 }
 
+/* Replace image icons with CSS icons */
 .category-icon {
-  margin-bottom: 1.5rem;
-}
-
-.category-icon img {
   width: 60px;
   height: 60px;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 2rem;
+  color: var(--white);
+  font-weight: bold;
+}
+
+.category-icon img {
+  display: none;
+}
+
+.hvac-icon {
+  background: linear-gradient(135deg, var(--primary-orange), #ff8c42);
+}
+
+.plumbing-icon {
+  background: linear-gradient(135deg, var(--primary-teal), #48cae4);
+}
+
+.landscaping-icon {
+  background: linear-gradient(135deg, #52b788, #74c69d);
+}
+
+.organization-icon {
+  background: linear-gradient(135deg, #f77f00, #fcbf49);
 }
 
 .category-card h3 {
-  color: #1e293b;
+  color: var(--text-dark);
   margin-bottom: 1rem;
   font-size: 1.3rem;
 }
 
 .category-card p {
-  color: #64748b;
+  color: var(--medium-gray);
   margin-bottom: 1.5rem;
   line-height: 1.5;
 }
 
 .category-link {
-  color: #14b8a6;
+  color: var(--primary-teal);
   font-weight: 600;
   text-decoration: none;
 }
 
 .category-link:hover {
-  color: #0d9488;
+  color: var(--primary-orange);
 }
 
 /* Recent Posts */
 .recent-posts {
   padding: 80px 0;
-  background: #f8fafc;
+  background: var(--light-gray);
 }
 
 .recent-posts h2 {
   text-align: center;
   margin-bottom: 3rem;
-  color: #1e293b;
+  color: var(--text-dark);
   font-size: 2.5rem;
 }
 
@@ -197,16 +250,16 @@
 }
 
 .post-card {
-  background: white;
+  background: var(--white);
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .post-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-hover);
 }
 
 .post-image img {
@@ -233,16 +286,16 @@
 }
 
 .post-content h3 a {
-  color: #1e293b;
+  color: var(--text-dark);
   text-decoration: none;
 }
 
 .post-content h3 a:hover {
-  color: #14b8a6;
+  color: var(--primary-teal);
 }
 
 .post-content p {
-  color: #64748b;
+  color: var(--medium-gray);
   line-height: 1.5;
   margin-bottom: 1rem;
   font-size: 0.95rem;
@@ -251,8 +304,8 @@
 /* Newsletter Signup */
 .newsletter-signup {
   padding: 80px 0;
-  background: #14b8a6;
-  color: white;
+  background: var(--primary-teal);
+  color: var(--white);
   text-align: center;
 }
 
@@ -283,8 +336,8 @@
 }
 
 .newsletter-form button {
-  background: #fb923c;
-  color: white;
+  background: var(--primary-orange);
+  color: var(--white);
   border: none;
   padding: 1rem 2rem;
   border-radius: 6px;
@@ -294,11 +347,15 @@
 }
 
 .newsletter-form button:hover {
-  background: #ea580c;
+  background: #e55a2b;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .blog-hero {
+    padding: 100px 0 60px;
+  }
+
   .blog-hero h1 {
     font-size: 2.2rem;
   }
@@ -335,7 +392,7 @@
 
 @media (max-width: 480px) {
   .blog-hero {
-    padding: 60px 0 40px;
+    padding: 80px 0 40px;
   }
 
   .blog-hero h1 {
@@ -346,7 +403,7 @@
   .blog-categories,
   .recent-posts,
   .newsletter-signup {
-    padding: 40px 0;
+    padding: 60px 0;
   }
 
   .article-content,

@@ -43,64 +43,69 @@
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <a href="../index.html">
-                        <img src="../images/logo.png" alt="Comfortrama Home Services" width="200" height="60">
-                    </a>
-                </div>
-                <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="../index.html" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle">Services</a>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="nav-brand">
+                <img src="../images/comfortrama-logo.jpg" alt="Comfortrama Home Services Logo" class="logo">
+                <span class="brand-name">Comfortrama</span>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Services <span class="dropdown-arrow">▼</span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="../services/hvac.html">HVAC Services</a></li>
+                            <li><a href="../services/hvac.html">HVAC</a></li>
                             <li><a href="../services/plumbing.html">Plumbing</a></li>
                             <li><a href="../services/landscaping.html">Landscaping</a></li>
                             <li><a href="../services/junk-removal.html">Junk Removal</a></li>
+                            <li><a href="../services/window-cleaning.html">Window Cleaning</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle">Locations</a>
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Areas Served <span class="dropdown-arrow">▼</span></a>
                         <ul class="dropdown-menu">
                             <li><a href="../locations/ottawa.html">Ottawa</a></li>
                             <li><a href="../locations/orleans.html">Orleans</a></li>
                             <li><a href="../locations/kanata.html">Kanata</a></li>
+                            <li><a href="../locations/greely.html">Greely</a></li>
+                            <li><a href="../locations/manotick.html">Manotick</a></li>
                             <li><a href="../locations/barrhaven.html">Barrhaven</a></li>
+                            <li><a href="../locations/bells-corners.html">Bells Corners</a></li>
+                            <li><a href="../locations/gloucester.html">Gloucester</a></li>
                             <li><a href="../locations/nepean.html">Nepean</a></li>
                             <li><a href="../locations/stittsville.html">Stittsville</a></li>
+                            <li><a href="../locations/ottawa-valley.html">Ottawa Valley</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a href="index.html" class="nav-link active">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../contact.html" class="nav-link">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../quote.html" class="nav-link cta-button">Get Quote</a>
-                    </li>
+                    <li><a href="index.html" class="nav-link active">Blog</a></li>
+                    <li><a href="../contact.html" class="nav-link">Contact</a></li>
                 </ul>
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
             </div>
+            
+            <div class="nav-cta">
+                <a href="tel:+1-613-XXX-XXXX" class="phone-link">(613) XXX-XXXX</a>
+                <a href="../quote.html" class="cta-button">Free Quote</a>
+            </div>
+            
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
     </header>
 
     <main>
          Breadcrumb 
         <nav class="breadcrumb" aria-label="Breadcrumb">
-            <ol>
-                <li><a href="../index.html">Home</a></li>
-                <li aria-current="page">Blog</li>
-            </ol>
+            <div class="container">
+                <ol>
+                    <li><a href="../index.html">Home</a></li>
+                    <li aria-current="page">Blog</li>
+                </ol>
+            </div>
         </nav>
 
          Hero Section 
@@ -138,32 +143,32 @@
                 <h2>Browse by Category</h2>
                 <div class="categories-grid">
                     <div class="category-card">
-                        <div class="category-icon">
-                            <img src="../images/icons/hvac-icon.jpg" alt="HVAC" width="60" height="60">
+                        <div class="category-icon hvac-icon">
+                            🔥
                         </div>
                         <h3>HVAC Tips</h3>
                         <p>Heating, cooling, and ventilation advice for Ottawa homes</p>
                         <a href="#hvac-posts" class="category-link">View Articles</a>
                     </div>
                     <div class="category-card">
-                        <div class="category-icon">
-                            <img src="../images/icons/plumbing-icon.jpg" alt="Plumbing" width="60" height="60">
+                        <div class="category-icon plumbing-icon">
+                            🔧
                         </div>
                         <h3>Plumbing Advice</h3>
                         <p>Prevent costly repairs with expert plumbing maintenance</p>
                         <a href="#plumbing-posts" class="category-link">View Articles</a>
                     </div>
                     <div class="category-card">
-                        <div class="category-icon">
-                            <img src="../images/icons/landscaping-icon.jpg" alt="Landscaping" width="60" height="60">
+                        <div class="category-icon landscaping-icon">
+                            🌿
                         </div>
                         <h3>Landscaping</h3>
                         <p>Seasonal yard care and landscaping tips for Ottawa climate</p>
                         <a href="#landscaping-posts" class="category-link">View Articles</a>
                     </div>
                     <div class="category-card">
-                        <div class="category-icon">
-                            <img src="../images/icons/junk-removal-icon.jpg" alt="Home Organization" width="60" height="60">
+                        <div class="category-icon organization-icon">
+                            🗑️
                         </div>
                         <h3>Home Organization</h3>
                         <p>Decluttering and organization tips for Ottawa homeowners</p>
@@ -288,63 +293,78 @@
          CTA Section 
         <section class="cta-section">
             <div class="container">
-                <h2>Need Professional Home Services?</h2>
-                <p>Our expert team is ready to help with all your home service needs across Ottawa</p>
-                <div class="cta-buttons">
-                    <a href="../quote.html" class="btn btn-primary">Get Free Quote</a>
-                    <a href="../contact.html" class="btn btn-secondary">Contact Us</a>
+                <div class="cta-content">
+                    <h2>Need Professional Home Services?</h2>
+                    <p>Our expert team is ready to help with all your home service needs across Ottawa</p>
+                    <div class="cta-buttons">
+                        <a href="../quote.html" class="cta-primary">Get Free Quote</a>
+                        <a href="../contact.html" class="cta-secondary">Contact Us</a>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Comfortrama Home Services</h3>
-                <p>Your trusted partner for home services across Ottawa and surrounding areas.</p>
-                <div class="contact-info">
-                    <p><strong>Phone:</strong> <a href="tel:+16135551234">(613) 555-1234</a></p>
-                    <p><strong>Email:</strong> <a href="mailto:info@comfortrama.ca">info@comfortrama.ca</a></p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="../images/comfortrama-logo.jpg" alt="Comfortrama Home Services" class="footer-logo">
+                        <h3>Comfortrama Home Services</h3>
+                        <p>Your trusted partner for professional home services in Ottawa and surrounding areas.</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="../services/hvac.html">HVAC Services</a></li>
+                        <li><a href="../services/plumbing.html">Plumbing</a></li>
+                        <li><a href="../services/landscaping.html">Landscaping</a></li>
+                        <li><a href="../services/junk-removal.html">Junk Removal</a></li>
+                        <li><a href="../services/window-cleaning.html">Window Cleaning</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Areas Served</h4>
+                    <ul>
+                        <li><a href="../locations/ottawa.html">Ottawa</a></li>
+                        <li><a href="../locations/orleans.html">Orleans</a></li>
+                        <li><a href="../locations/kanata.html">Kanata</a></li>
+                        <li><a href="../locations/barrhaven.html">Barrhaven</a></li>
+                        <li><a href="../locations/nepean.html">Nepean</a></li>
+                        <li><a href="../locations/stittsville.html">Stittsville</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><strong>Phone:</strong> <a href="tel:+1-613-XXX-XXXX">(613) XXX-XXXX</a></p>
+                        <p><strong>Email:</strong> <a href="mailto:info@comfortrama.ca">info@comfortrama.ca</a></p>
+                        <p><strong>Address:</strong> Ottawa, ON</p>
+                        <div class="business-hours">
+                            <p><strong>Business Hours:</strong></p>
+                            <p>Mon-Fri: 8:00 AM - 6:00 PM</p>
+                            <p>Saturday: 9:00 AM - 4:00 PM</p>
+                            <p>Sunday: Emergency Only</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             
-            <div class="footer-section">
-                <h4>Services</h4>
-                <ul>
-                    <li><a href="../services/hvac.html">HVAC Services</a></li>
-                    <li><a href="../services/plumbing.html">Plumbing</a></li>
-                    <li><a href="../services/landscaping.html">Landscaping</a></li>
-                    <li><a href="../services/junk-removal.html">Junk Removal</a></li>
-                </ul>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Comfortrama Home Services. All rights reserved.</p>
+                    <div class="footer-links">
+                        <a href="../privacy-policy.html">Privacy Policy</a>
+                        <a href="../terms-of-service.html">Terms of Service</a>
+                        <a href="../sitemap.xml">Sitemap</a>
+                    </div>
+                </div>
             </div>
-            
-            <div class="footer-section">
-                <h4>Service Areas</h4>
-                <ul>
-                    <li><a href="../locations/ottawa.html">Ottawa</a></li>
-                    <li><a href="../locations/orleans.html">Orleans</a></li>
-                    <li><a href="../locations/kanata.html">Kanata</a></li>
-                    <li><a href="../locations/barrhaven.html">Barrhaven</a></li>
-                    <li><a href="../locations/nepean.html">Nepean</a></li>
-                    <li><a href="../locations/stittsville.html">Stittsville</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="index.html">Blog</a></li>
-                    <li><a href="../contact.html">Contact</a></li>
-                    <li><a href="../quote.html">Get Quote</a></li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2025 Comfortrama Home Services. All rights reserved.</p>
-            <p>Licensed and insured home services provider serving Ottawa and surrounding areas.</p>
         </div>
     </footer>
 
